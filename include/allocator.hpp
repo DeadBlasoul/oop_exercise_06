@@ -140,7 +140,7 @@ namespace oop
             }
             if (n > max_size())
             {
-                throw std::invalid_argument{"vector_allocator: bad n"};
+                throw std::invalid_argument{"vector_allocator: bad block size"};
             }
             return values_.reserve_block();
         }
@@ -149,7 +149,7 @@ namespace oop
         {
             if (n > max_size())
             {
-                throw std::invalid_argument{"vector_allocator: bad n"};
+                throw std::invalid_argument{"vector_allocator: bad block size"};
             }
             values_.free_block(block);
         }
